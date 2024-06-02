@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: course-management-service
 spec:
+  type: NodePort
   selector:
-    app: course-management
+    app: course-management # Correct format: key-value pair
   ports:
     - protocol: TCP
       port: 3002
       targetPort: 3002
+      nodePort: 30002

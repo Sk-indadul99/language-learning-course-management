@@ -84,7 +84,7 @@ router.get("/recommendations/:userId", async (req, res) => {
     const userId = req.params.userId;
 
     const response = await axios.get(
-      `http://localhost:3001/users/${userId}/proficiency`
+      `http://192.168.49.2:30001/users/${userId}/proficiency`
     );
     const userProficiency = response.data.proficiency;
 
